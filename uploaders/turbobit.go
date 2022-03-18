@@ -9,11 +9,18 @@ import (
 	"regexp"
 )
 
-func (u *Uploader) Init() {
+type TurboBitHost struct {
+	Host
+}
+type TurboBitUploader struct {
+	Uploader
+}
+
+func (u *TurboBitHost) Init() {
 	u.httpClient = &http.Client{}
 }
 
-func (u *Uploader) ParsePage() bool {
+func (u *TurboBitHost) ParsePage() bool {
 
 	resp, err := u.httpClient.Get(u.InitUrl)
 	if err != nil {
@@ -58,7 +65,7 @@ func (u *Uploader) ParsePage() bool {
 	return true
 }
 
-func (u *Uploader) UploadFile() bool {
+func (u *TurboBitHost) UploadFile() bool {
 	mulipartReq, err := MakeMultipartFormData(
 		u.UploadUrl, u.uploadParams,
 		"Filedata", u.FilePath)

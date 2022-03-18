@@ -9,14 +9,14 @@ import (
 	"path/filepath"
 )
 
-type Uploader struct {
+type Host struct {
 	InitUrl      string
 	UploadUrl    string
 	FilePath     string
 	uploadParams map[string]string
 	httpClient   *http.Client
 }
-type UploadManager interface {
+type Uploader interface {
 	Init()
 	ParsePage() bool
 	UploadFile() bool
