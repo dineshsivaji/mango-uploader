@@ -90,3 +90,10 @@ func (u *TurboBitHost) UploadFile() bool {
 		return true
 	}
 }
+
+// um := &uploaders.TurboBitHost{
+// 	Host: uploaders.Host{
+// 		InitUrl:  "https://turbobit.net/",
+// 		FilePath: "/Users/dsivaji/Downloads/housing.csv",
+// 	},
+// }

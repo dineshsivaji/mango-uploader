@@ -10,14 +10,24 @@ import (
 )
 
 type Host struct {
+	Credentials
 	InitUrl      string
+	LoginUrl     string
 	UploadUrl    string
+	DownloadUrl  string
 	FilePath     string
+	LoginSuccess bool
 	uploadParams map[string]string
 	httpClient   *http.Client
 }
+type Credentials struct {
+	Username string
+	Password string
+	ApiKey   string
+}
 type Uploader interface {
 	Init()
+	Login() bool
 	ParsePage() bool
 	UploadFile() bool
 }
