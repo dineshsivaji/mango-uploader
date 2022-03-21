@@ -15,7 +15,7 @@ import (
 type FileFactoryHost struct {
 	Host
 }
-type FileFactoryHostUploader interface {
+type FileFactoryUploader interface {
 	Uploader
 }
 
