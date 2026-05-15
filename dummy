@@ -1,0 +1,5 @@
+➜  ~ grep -n "RTW89_FW_FEATURE_SCAN_OFFLOAD" /usr/src/rtw89-7.1/*.c /usr/src/rtw89-7.1/*.h
+/usr/src/rtw89-7.1/core.h:4894: RTW89_FW_FEATURE_SCAN_OFFLOAD,
+/usr/src/rtw89-7.1/core.h:4905: RTW89_FW_FEATURE_SCAN_OFFLOAD_BE_V0,
+/usr/src/rtw89-7.1/core.h:4927: RTW89_FW_FEATURE_SCAN_OFFLOAD_EXTRA_OP,
+➜  ~
