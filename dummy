@@ -3,3 +3,28 @@
 /usr/src/rtw89-7.1/core.h:4905: RTW89_FW_FEATURE_SCAN_OFFLOAD_BE_V0,
 /usr/src/rtw89-7.1/core.h:4927: RTW89_FW_FEATURE_SCAN_OFFLOAD_EXTRA_OP,
 ➜  ~
+
+
+➜  ~ grep -rn "SCAN_OFFLOAD" /usr/src/rtw89-7.1/
+/usr/src/rtw89-7.1/fw.c:861:	__CFG_FW_FEAT(RTL8851B, ge, 0, 29, 37, 1, SCAN_OFFLOAD),
+/usr/src/rtw89-7.1/fw.c:866:	__CFG_FW_FEAT(RTL8852A, ge, 0, 13, 35, 0, SCAN_OFFLOAD),
+/usr/src/rtw89-7.1/fw.c:874:	__CFG_FW_FEAT(RTL8852B, ge, 0, 29, 29, 0, SCAN_OFFLOAD),
+/usr/src/rtw89-7.1/fw.c:881:	__CFG_FW_FEAT(RTL8852B, ge, 0, 29, 128, 0, SCAN_OFFLOAD_EXTRA_OP),
+/usr/src/rtw89-7.1/fw.c:887:	__CFG_FW_FEAT(RTL8852BT, ge, 0, 29, 91, 0, SCAN_OFFLOAD),
+/usr/src/rtw89-7.1/fw.c:890:	__CFG_FW_FEAT(RTL8852BT, ge, 0, 29, 127, 0, SCAN_OFFLOAD_EXTRA_OP),
+/usr/src/rtw89-7.1/fw.c:898:	__CFG_FW_FEAT(RTL8852C, ge, 0, 27, 36, 0, SCAN_OFFLOAD),
+/usr/src/rtw89-7.1/fw.c:911:	__CFG_FW_FEAT(RTL8922A, ge, 0, 34, 35, 0, SCAN_OFFLOAD),
+/usr/src/rtw89-7.1/fw.c:912:	__CFG_FW_FEAT(RTL8922A, ge, 0, 34, 35, 0, SCAN_OFFLOAD_EXTRA_OP),
+/usr/src/rtw89-7.1/fw.c:914:	__CFG_FW_FEAT(RTL8922A, lt, 0, 35, 21, 0, SCAN_OFFLOAD_BE_V0),
+/usr/src/rtw89-7.1/fw.c:6734:	if (RTW89_CHK_FW_FEATURE(SCAN_OFFLOAD_BE_V0, &rtwdev->fw)) {
+/usr/src/rtw89-7.1/fw.c:9205:	if (!RTW89_CHK_FW_FEATURE(SCAN_OFFLOAD_EXTRA_OP, &rtwdev->fw))
+/usr/src/rtw89-7.1/mac80211.c:1272:	if (!RTW89_CHK_FW_FEATURE(SCAN_OFFLOAD, &rtwdev->fw))
+/usr/src/rtw89-7.1/mac80211.c:1309:	if (!RTW89_CHK_FW_FEATURE(SCAN_OFFLOAD, &rtwdev->fw))
+/usr/src/rtw89-7.1/coex.c:5766:	    RTW89_CHK_FW_FEATURE(SCAN_OFFLOAD, &rtwdev->fw)) {
+/usr/src/rtw89-7.1/core.h:4894:	RTW89_FW_FEATURE_SCAN_OFFLOAD,
+/usr/src/rtw89-7.1/core.h:4905:	RTW89_FW_FEATURE_SCAN_OFFLOAD_BE_V0,
+/usr/src/rtw89-7.1/core.h:4927:	RTW89_FW_FEATURE_SCAN_OFFLOAD_EXTRA_OP,
+/usr/src/rtw89-7.1/core.c:3789:	    RTW89_CHK_FW_FEATURE(SCAN_OFFLOAD, &rtwdev->fw)) {
+/usr/src/rtw89-7.1/core.c:6995:		     !RTW89_CHK_FW_FEATURE(SCAN_OFFLOAD, &early_fw) ||
+/usr/src/rtw89-7.1/fw.h:3043:	__le32 w9; /* Added after SCAN_OFFLOAD_BE_V1 */
+➜  ~
