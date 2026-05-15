@@ -67,3 +67,21 @@ filename:       /lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
 ➜  ~ modinfo /lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst| grep srcversion
 srcversion:     5356F5AE7EE1EB77F2D7CB3
 
+
+
+➜  ~ cat /sys/module/rtw89_core_git/srcversion
+9FA7AA3E59344F2B99D0942
+➜  ~ lsinitramfs /boot/initrd.img-7.0.0-15-generic | grep rtw89_core
+3cpio: Error: Failed to open '/boot/initrd.img-7.0.0-15-generic': Permission denied (os error 13)
+➜  ~ sudo lsinitramfs /boot/initrd.img-7.0.0-15-generic | grep rtw89_core
+[sudo: authenticate] Password:
+usr/lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
+➜  ~ find /lib/modules/7.0.0-15-generic -name "rtw89_core*"
+/lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
+/lib/modules/7.0.0-15-generic/kernel/drivers/net/wireless/realtek/rtw89/rtw89_core.ko.zst
+➜  ~ modinfo /lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst| grep srcversion
+srcversion:     5356F5AE7EE1EB77F2D7CB3
+➜  ~
+
+
+
