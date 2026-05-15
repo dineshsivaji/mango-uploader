@@ -47,3 +47,18 @@
 ➜  ~ modinfo rtw89_core_git | grep srcversion
 srcversion:     5356F5AE7EE1EB77F2D7CB3
 ➜  ~
+
+
+
+
+➜  ~ cat /sys/module/rtw89_core_git/srcversion
+9FA7AA3E59344F2B99D0942
+➜  ~ dkms status
+rtw89/7.1, 7.0.0-15-generic, x86_64: installed
+➜  ~
+➜  ~ modinfo rtw89_core_git | grep filename
+filename:       /lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
+➜  ~ sed -n '874p' /usr/src/rtw89-7.1/fw.c
+        // __CFG_FW_FEAT(RTL8852B, ge, 0, 29, 29, 0, SCAN_OFFLOAD),
+➜  ~
+
