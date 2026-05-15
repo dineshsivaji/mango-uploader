@@ -84,4 +84,11 @@ srcversion:     5356F5AE7EE1EB77F2D7CB3
 ➜  ~
 
 
+sudo update-initramfs -u -k 7.0.0-15-generic
+update-initramfs: Generating /boot/initrd.img-7.0.0-15-generic
+➜  ~ sudo lsinitramfs -u -k 7.0.0-15-generic |
+➜  ~ sudo lsinitramfs /boot/initrd.img-7.0.0-15-generic| grep rtw89_core_git
+usr/lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
+➜  ~
+
 
