@@ -92,3 +92,18 @@ usr/lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
 ➜  ~
 
 
+sudo unmkinitramfs /boot/initrd.img-7.0.0-15-generic /tmp/intramfs-check
+➜  ~ modinfo /tmp/intramfs-check/main/usr/lib/modules
+➜  ~ cd /tmp/intramfs-check
+➜  intramfs-check ls
+bin  dev  early_cpio  etc  init  kernel  lib  lib64  proc  root  run  sbin  shutdown  sys  sysroot  tmp  usr  var
+➜  intramfs-check find . -name rtw89_core_git.ko.zst
+./usr/lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
+➜  intramfs-check modinfo
+➜  intramfs-check pwd
+/tmp/intramfs-check
+➜  intramfs-check readlink -f ./usr/lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
+/tmp/intramfs-check/usr/lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
+➜  intramfs-check modinfo /tmp/intramfs-check/usr/lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst | grep srcversion
+srcversion:     5356F5AE7EE1EB77F2D7CB3
+
