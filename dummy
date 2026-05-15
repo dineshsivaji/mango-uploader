@@ -62,3 +62,8 @@ filename:       /lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst
         // __CFG_FW_FEAT(RTL8852B, ge, 0, 29, 29, 0, SCAN_OFFLOAD),
 ➜  ~
 
+
+
+➜  ~ modinfo /lib/modules/7.0.0-15-generic/updates/dkms/rtw89_core_git.ko.zst| grep srcversion
+srcversion:     5356F5AE7EE1EB77F2D7CB3
+
